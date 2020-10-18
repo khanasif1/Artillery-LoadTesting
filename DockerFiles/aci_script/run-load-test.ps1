@@ -15,18 +15,6 @@ Write-Host "Result created"
 Write-Host "Read result"
 $result = Get-Content -Path $outputFile  
 Write-Host $result 
-# if ($env:AZ_STORAGE_ACCOUNT){
-#     Write-Host "Uploading results to blob storage"
-
-#     Upload-Results `
-#         -StorageAccountName $env:AZ_STORAGE_ACCOUNT `
-#         -StorageAccountKey $env:AZ_STORAGE_KEY `
-#         -LoadTestName $env:LOAD_TEST_NAME `
-#         -ResultsFile $resultsFile
-# }
-
-
-
 write-host "Finished load test"
 
 exit
