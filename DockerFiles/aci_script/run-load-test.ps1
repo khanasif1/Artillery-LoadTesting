@@ -11,6 +11,10 @@ Write-Host "Creating results file"
 
 ./node_modules/artillery/bin/artillery report -o $resultsFile $outputFile
 
+Write-Host "Result created"
+Write-Host "Read result"
+$result = Get-Content -Path $outputFile  
+Write-Host $result 
 # if ($env:AZ_STORAGE_ACCOUNT){
 #     Write-Host "Uploading results to blob storage"
 
