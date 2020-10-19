@@ -89,8 +89,7 @@ exit
 
 <!-- wp:shortcode -->
 
-'``
-
+```
 # FROM node:8-alpine
 FROM mcr.microsoft.com/powershell:6.2.1-alpine-3.8
 
