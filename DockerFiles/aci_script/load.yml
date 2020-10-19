@@ -3,7 +3,7 @@ config:
       p95: 3000
     environments:
       local-dev:
-        target: 'https://{api url}'
+        target: 'https://cat-fact.herokuapp.com/'
         phases:
         - name: "warm up"
           duration: 30
@@ -13,7 +13,7 @@ scenarios:
     - name: "Staff APi"
       flow:
       - get:
-          url: "/api/Staff"
+          url: "/facts"
 
 
           
