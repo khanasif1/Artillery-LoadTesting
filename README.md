@@ -7,6 +7,7 @@ This repository has end to end solution for how to configure load test for your 
 <!-- wp:list -->
 <ul><li>In order to load test API, the first thing we need is a API :) For this Blog I am using free API from <a href="https://github.com/public-apis/">Github</a>.  I am using cats fact <a href="https://cat-fact.herokuapp.com/facts">API </a></li><li>Artillery needs a load test configuration file in YAML format. Detailed documentation for all the possible configurations are available <a href="https://artillery.io/docs/guides/guides/test-script-reference.html#Load-Phases">@link</a>. I am using some basic load configuration in YAML .</li></ul>
 <!-- /wp:list -->
+```
 config:
     ensure:
       p95: 3000
@@ -23,6 +24,7 @@ scenarios:
       flow:
       - get:
           url: "/facts"
+```          
 <!-- wp:list -->
 <ul><li>Core items in Yaml above are <ul><li>environment : we can configure more than one environment setting in one file and select which environment configuration we want to execute at runtime </li><li>duration: This will be the duration for load test</li><li>arrivalRate: This will be starting load when test starts</li><li>rampTo: This will be the max load for the durations</li></ul></li></ul>
 <!-- /wp:list -->
@@ -36,7 +38,8 @@ scenarios:
 <!-- /wp:list -->
 
 <!-- wp:shortcode -->
-[code]
+
+```powershell
 Write-Host "Invoking Artillery to run load test $env:LOAD_TEST_NAME with file $env:ARTILLERYIO_FILE"
 
 $outputFile = "/tmp/$env:REPORT_NAME.json"
@@ -55,7 +58,9 @@ Write-Host $result
 write-host "Finished load test"
 
 exit
-[/code]
+
+```
+
 <!-- /wp:shortcode -->
 
 <!-- wp:list -->
